@@ -25,4 +25,4 @@ These scripts are based on <https://github.com/mauserrifle/vagrant-debian-shell>
 
 `/scripts/install_after.sh` provides the ability to import a mysql database dump, change the apache admin email address as well as other functions.
 
-`/scripts/vmhost_host_add.sh` and `/scripts/vmhost_host_remove.sh`
+`/scripts/vmhost_host_add.sh` and `/scripts/vmhost_host_remove.sh` can be run via in the host shell to add and remove entries for the vm in the vm host's hosts file.  Have not tried it yet, but these could probably be used in conjunction with [this](https://github.com/emyl/vagrant-triggers) vagrant plugin to automate this process.
