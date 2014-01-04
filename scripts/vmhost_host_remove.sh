@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## VM Host Hose file update script
-# This script adds an entry for the vm to the hosts file on recient versions of osx.
+# This script removes the entry for the vm from the hosts file on recient versions of osx.
 
 
 # make sure we are running as root
