@@ -61,7 +61,7 @@
     elif [[ -f /etc/apache2/sites-available/default.original ]];
     then
         echo "Admin email displayed in apache server errors set to $admin_email"
-	
+
 	# if $admin_email is set, but apache has not been set up
     elif [[ -n $admin_email ]] && \
     	 [[ ! -f /etc/apache2/apache2.conf  ]];
@@ -79,6 +79,9 @@
 ## enable mod_rewrite
 	a2enmod rewrite
 
+## Restart apache
+/etc/init.d/apache2 restart
+
 
 ## Create phpinfo
 	echo '<?php phpinfo();' > /vagrant/phpinfo.php
@@ -90,20 +93,19 @@
 
 
 ## Uncomplicated Firewall (UFW)
-# use this if your development environment is not secure
 
-# # Get ufw status
-# 	ufw_status=$(ufw status | grep Status)
-# 
-# # if ufw is not active
-# 	if [[ $ufw_status != 'Status: active' ]];
-# 	then
-# 		ufw allow 22
-# 		ufw allow 80
-# 		echo 'y' | sudo ufw enable
-# 	elif  [[ $ufw_status == 'Status: active' ]];
-# 	then
-# 		echo "UFW is active"
-# 	fi
+# Get ufw status
+	ufw_status=$(ufw status | grep Status)
+
+# if ufw is not active
+	if [[ $ufw_status != 'Status: active' ]];
+	then
+		ufw allow 22
+		ufw allow 80
+		echo 'y' | sudo ufw enable
+	elif  [[ $ufw_status == 'Status: active' ]];
+	then
+		echo "UFW is active"
+	fi
 
 
