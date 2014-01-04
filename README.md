@@ -13,14 +13,16 @@ These scripts are based on <https://github.com/mauserrifle/vagrant-debian-shell>
 
 `Vagrantfile` is included for reference.
 
-`provision.sh` is the file called by `Vagrantfile` and controls what scripts are executed
+`/scripts/provision.sh` is the file called by `Vagrantfile` and controls what scripts are executed
 
-`config.sh` contains all of the cofigurable variables. See comments in that file for explanations
+`/scripts/config.sh` contains all of the cofigurable variables. See comments in that file for explanations
 
-`install_before.sh` provides the ability to change Ubuntu repositories, time zone, and runs `apt-get update` and `apt-get upgrade` if they have not already been run that day
+`/scripts/install_before.sh` provides the ability to change Ubuntu repositories, time zone, and runs `apt-get update` and `apt-get upgrade` if they have not already been run that day
 
-`install_lamp.sh` installs mysql, php, apache2 and postfix. See the script for details.
+`/scripts/install_lamp.sh` installs mysql, php, apache2 and postfix. See the script for details.
 
-`install_phpmyadmin.sh`, `install_xdebug.sh`, and `install_phpunit.sh` are all self explanitory.
+`/scripts/install_phpmyadmin.sh`, `/scripts/install_phpmyunit.sh`, and `/scripts/install_xdebug.sh` are all self explanitory.
 
-`install_after.sh` provides the ability to import a mysql database dump, change the apache admin email address as well as other functions.
+`/scripts/install_after.sh` provides the ability to import a mysql database dump, change the apache admin email address as well as other functions.
+
+`/scripts/vmhost_host_add.sh` and `/scripts/vmhost_host_remove.sh`
