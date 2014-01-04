@@ -23,9 +23,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-### Change this to a unique address. 
+### Change this to a unique address.
 ### It should be in the subnet defined by virtualbox for your machine
-  config.vm.network :private_network, ip: "192.168.42.101"
+  config.vm.network :private_network, ip: "192.168.42.199"
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
